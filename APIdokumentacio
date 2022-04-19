@@ -1,0 +1,26 @@
+base URL: http://localhost:3000
+GET /food/list --> Étlapot ad vissza
+POST /food/create --> Ételt hoz létre, a következő paramétereket várja bodyban: name,category,allergens,price
+PUT /food/edit/:id --> Ételt updatel, a következő paramétereket várja bodyban: name,category,allergens,price
+DELETE /food/remove/:id --> Ételt töröl
+
+GET /users/list --> Felhasználókat ad vissza
+POST /users/create --> Felhasználót hoz létre, a következő paramétereket várja bodyban: felhasznalonev,jelszo,admin,vezeteknev
+PUT /users/edit/:id --> Felhasználót updatel, a következő paramétereket várja bodyban: felhasznalonev,jelszo,admin,vezeteknev
+DELETE /users/remove/:id --> Felhasználót töröl
+
+POST /login --> Bejelentkeztet, a következő paramétereket várja bodyban: felhasznalonev,jelszo,jogosultsag
+
+GET /tables/list --> Asztalokat ad vissza
+PUT /tables/edit/:id --> Asztalt updatel, a következő paramétereket várja bodyban: alsoSzekFoglalt, felsoSzekFoglalt, alsoSzekZarolva, felsoSzekZarolva, rendelesAllapot
+
+PUT /tables/:id/:state --> Asztal státuszt és hozzátartozó rendelést updatel
+PUT /tables/:id/chair:pos/:state/:lock --> Asztalt és hozzátartozó székeket updatel, lock és státusz
+
+POST /tables/:id/chair/:pos/state/:state/ --> szék státuszt updatel
+POST /tables/:id/chair/:pos/lock/:state/ --> szék lockot updatel
+
+GET /tables/:id/orders --> Asztalhoz tartozó rendeléseket adja vissza
+POST /orders/create/:tableId --> Létrehoz új rendelést vagy updatel meglévő rendelést ami az asztalhoz kapcsolódik, a következőt várja bodyban: [{orderId,orderCount}...]
+
+
