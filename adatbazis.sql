@@ -3,7 +3,7 @@ USE etterem;
 CREATE TABLE felhasznalok (
     id INT NOT NULL AUTO_INCREMENT,
     felhasznalonev VARCHAR(255),
-    jelszo VARCHAR(255),
+    jelszo VARCHAR(20),
     vezeteknev VARCHAR(255),
     keresztnev VARCHAR(255),
     admin BOOLEAN,
